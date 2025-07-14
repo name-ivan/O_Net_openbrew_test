@@ -17,9 +17,8 @@ class BreweryEndpoint:
             name=f"Response for by_type={brewery_type}",
             attachment_type=allure.attachment_type.JSON
         )
-        
-        return response
 
+        return response
 
     @staticmethod
     @allure.step("Parse response as JSON")

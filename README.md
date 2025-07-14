@@ -78,6 +78,25 @@ poetry run pytest --alluredir=allure-results
 ```bash
 allure serve allure-results
 ```
+---
+## 📊 Sample Allure Report
+
+Below is a screenshot of the **Allure report** generated after running the test suite:
+
+![Allure Report](assets/allure-report.png)
+
+✅ The report highlights:
+
+- **Logical grouping** of test cases via Allure annotations (`@allure.feature`, `@allure.story`)
+- Clearly **parameterized test names** like `test_by_type_invalid[letters_only]`
+- Detailed **step-by-step logging**:
+  - The exact GET request made (with parameters)
+  - HTTP status code
+  - Response body and JSON parsing
+- For invalid input types, the API returns a consistent message:  
+  `{"message": "Welcome to the Breweries API, see the documentation at https://www.openbrewerydb.org/documentation"}`
+
+🧾 This rich, visual breakdown of test execution provides easy debugging and validation for developers, testers, and reviewers alike.
 
 ---
 
