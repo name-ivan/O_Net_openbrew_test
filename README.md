@@ -3,7 +3,7 @@
 ![Python Version](https://img.shields.io/badge/python-3.12-blue)
 ![Test Framework](https://img.shields.io/badge/tested%20with-pytest-yellow)
 ![Allure Reporting](https://img.shields.io/badge/report-Allure-blueviolet)
-
+![CI](https://github.com/name-ivan/O_Net_openbrew_test/actions/workflows/pytest.yml/badge.svg?branch=main)
 
 This project demonstrates API test automation using [Open Brewery DB](https://www.openbrewerydb.org/) — a public REST API that returns brewery information by filters like type, city, or name.
 
@@ -18,7 +18,6 @@ The test suite is written in **Python** using **pytest**, with **Allure** for re
 | TC_01        | Filter breweries by valid type           | Positive | 1. Set a valid `by_type` value (e.g. `micro`) <br> 2. Send GET request to `/breweries?by_type=<type>` <br> 3. Parse JSON response <br> 4. Verify `brewery_type` of each item matches input | 200 OK <br> List of breweries with matching `brewery_type`                      | `status_code == 200`, each item has `brewery_type == input` |
 | TC_02        | Filter breweries by invalid random types | Negative | 1. Generate invalid `by_type` value (letters, numbers, mixed) <br> 2. Send GET request to `/breweries?by_type=<invalid>` <br> 3. Parse JSON response <br> 4. Verify it's not a list and contains `"message"` | 200 OK <br> Not a list <br> Contains `"message"` field                          | `not isinstance(response.json(), list)` and `"message" in response` |
 
-
 ---
 
 ## 🧪 Project Structure
@@ -26,17 +25,17 @@ The test suite is written in **Python** using **pytest**, with **Allure** for re
 ```
 brewery_api_tests/
 ├── src/                                 # Source code root
-│   └── brewery_api_tests/              # Main package
+│   └── brewery_api_tests/              
 │       ├── endpoints/                  # API interaction layer
 │       │   └── brewery_endpoint.py     # Encapsulated API calls to /breweries
 │       ├── utils/                      # Helper functions
 │       │   └── generators.py           # Random string generators for test data
-│       └── __init__.py                 # Marks the folder as a Python package
-├── tests/                              # Test suite
+│       └── __init__.py                 
+├── tests/                              
 │   └── test_brew.py                    # API test cases for valid/invalid brewery types
 ├── pytest.ini                          # Pytest config (sets PYTHONPATH to src)
 ├── pyproject.toml                      # Poetry project config and dependencies
-├── .gitignore                          # Ignores virtual env, cache, and test artifacts
+├── .gitignore                          
 ```
 
 ---
