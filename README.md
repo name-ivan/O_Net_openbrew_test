@@ -58,7 +58,7 @@ brewery_api_tests/
 - [Poetry](https://python-poetry.org/) for dependency management
 - [Pytest](https://docs.pytest.org/)
 - [Allure](https://docs.qameta.io/allure/) for test reporting
-- [requests](https://docs.python-requests.org/) – to send HTTP requests
+- [requests](https://pypi.org/project/requests/) – to send HTTP requests
 
 ---
 
