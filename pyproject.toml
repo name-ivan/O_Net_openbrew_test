@@ -1,0 +1,24 @@
+[project]
+name = "o-net-openbrew-test"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Ivan",email = "ivan.sukhin26@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "o_net_openbrew_test", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+requests = "^2.32.4"
+allure-pytest = "^2.14.3"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

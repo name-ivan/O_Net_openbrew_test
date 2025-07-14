@@ -1,0 +1,14 @@
+# Bytecode and cache
+__pycache__/
+*.pyc
+.vscode
+
+# Pytest cache
+.pytest_cache/
+
+# Allure reports
+allure-results/
+allure-report/
+
+# Poetry virtual environment (if created locally)
+.venv/
