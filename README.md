@@ -83,7 +83,7 @@ allure serve allure-results
 
 Below is a screenshot of the **Allure report** generated after running the test suite:
 
-![Allure Report](assets/allure-report.png)
+![Allure Report](assets/allure_report.png)
 
 ✅ The report highlights:
 
